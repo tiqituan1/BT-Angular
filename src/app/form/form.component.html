@@ -1,0 +1,22 @@
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Chiều dài</label>
+            <input [(ngModel)]="HCN.dai"  class="form-control" id="inputEmail4" placeholder="Dài" [ngModelOptions]="{standalone: true}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Chiều rộng</label>
+            <input [(ngModel)]="HCN.rong" class="form-control" id="inputPassword4"  placeholder="Rộng" [ngModelOptions]="{standalone: true}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Diện Tích</label>
+        <input [(ngModel)]="HCN.dientich" class="form-control" id="inputAddress" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label>Chu Vi</label>
+        <input [(ngModel)]="HCN.chuvi" type="text" class="form-control" id="inputAddress2" [ngModelOptions]="{standalone: true}">
+    </div>
+
+    <button class="btn btn-primary" (click)="Tinh()">Tính</button>
+</form>

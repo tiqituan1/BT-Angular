@@ -1,0 +1,29 @@
+<div class="tab-content" id="pills-tabContent">
+    <h4>Your Card</h4>
+</div>
+<div>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quacelity</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let item of items">
+                <tr>
+                        <td>{{item.productName}}</td>
+                        <td>{{item.productCode}}</td>
+                        <td>{{item.releaseDate}}</td>
+                        <td>{{item.description}}</td>
+                        <td>{{item.price}}</td>
+                        <td>{{item.sl}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

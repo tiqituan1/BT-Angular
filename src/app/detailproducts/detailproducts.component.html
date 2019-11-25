@@ -1,0 +1,36 @@
+<div class="card border-success mb-3" style="max-width: 100%;border-color: black">
+        <div class="card-header bg-transparent border-success ">{{pageTitle}}
+        </div>
+        <div *ngIf="product">
+                <div class="card-body text-success">
+                        <div class="row" style="color: black">
+                                <div class="col-2">
+                                        <p class="card-text">Name:</p>
+                                        <p class="card-text">Code:</p>
+                                        <p class="card-text">Description:</p>
+                                        <p class="card-text">Availability:</p>
+                                        <p class="card-text">Price:</p>
+                                        <p class="card-text">5 Star Rating :</p>
+                                </div>
+                                <div class="col-4">
+                                        <p class="card-text">{{product.productName}}</p>
+                                        <p class="card-text">{{product.productCode}}</p>
+                                        <p class="card-text">{{product.description}}</p>
+                                        <p class="card-text">{{product.releaseDate}}</p>
+                                        <p class="card-text">{{product.price}}</p>
+                                        <p class="card-text">{{product.starRating}}</p>
+                                </div>
+                                <div class="col-5">
+                                        <img src="{{product.imageUrl}}" width="100%" height="200px">
+                                </div>
+                        </div>
+                </div>
+                <div class="card-footer bg-transparent border-success">
+                        <a (click)="onBack()"><i class='fas fa-arrow-left'></i></a>
+                        Back
+                        <!-- <button (click)="addtoCart(product)">Buy</button> -->
+                        <button >Buy</button>
+                </div>
+        </div>
+
+</div>

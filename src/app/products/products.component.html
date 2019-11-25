@@ -1,0 +1,50 @@
+<div class="card">
+    <div class="card-header">
+
+        List Product
+
+    </div>
+    <div class="card-body">
+        <div>Filter by:
+            <input type="text" size="20" />
+        </div>
+        <div>
+            <h3>
+                Filtered by:
+            </h3>
+        </div>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    <button type="button" class="btn btn-primary" (click)="hienthi()">Hien Image
+                    </button>
+                </th>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Code</th>
+                <th>Date</th>
+                <th>Diachi</th>
+                <th>price</th>
+                <th style="width: 100px">Số Lượng</th>
+                <th>Number 5 Start Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of filepro">
+                <td style="width: 70px;height: 30px ;text-align: center">
+                    <img src="{{p.imageUrl}} " style="width: 70px; height: 30px;">
+                </td>
+                <td>{{p.productId}}</td>
+                <td> <a [routerLink]="['/products',p.productId]">{{p.productName}}</a> </td>
+                <td>{{p.productCode}}</td>
+                <td>{{p.releaseDate}}</td>
+                <td>{{p.description}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.sl}}</td>
+                <td>{{p.starRating}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
